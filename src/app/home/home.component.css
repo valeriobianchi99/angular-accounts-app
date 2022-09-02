@@ -1,0 +1,59 @@
+/* Tag definitions */
+button {
+    background-color: gainsboro;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    font-size: 14px;
+    transition: all 0.4s;
+    margin: 10px;
+}
+
+a {
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border-top: 1px solid gainsboro;
+    opacity: 0.7;
+}
+/* End of tags 
+
+***
+***
+***
+
+Class definitions */
+.col-md-12 {
+    text-align: center;
+}
+
+.col-md-6 {
+    margin: 5px 0px;
+    text-align: left;
+    font-size: 14px;
+    padding-left: 10px !important;
+}
+/* End of classes 
+
+***
+***
+***
+
+ID definitions */
+#info {
+    width: 50%;
+    display: inline-block;
+    border-left: 3px solid skyblue;
+}
+
+#homePhoto {
+    width: 40%;
+    display: inline-block;
+    font-size: 90px;
+    text-align: center;
+}
+/* End of ID */

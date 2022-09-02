@@ -1,0 +1,79 @@
+/* Tag definitions */
+table {
+    color: white;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+tr{
+    border-bottom: 0.1px solid white;
+    transition: all 0.4s;
+}
+
+tr:hover{
+    background-color: gray;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+}
+
+thead {
+    background-color: white;
+    color: #333;
+}
+
+i:hover {
+    color: red;
+}
+
+button {
+    background-color: white;
+    border: 1px solid #333;
+    color: #333;
+    border-radius: 7px;
+    font-size: 14px;
+    transition: all 0.4s;
+    margin: 10px;
+}
+/* End of tags 
+
+***
+***
+***
+
+Class definitions */
+.toast-body {
+    color: white;
+    text-shadow: 1px 1px 5px black;
+    text-align: center;
+}
+
+.del-button {
+    background-color: red;
+}
+
+.toastButtons{
+    text-align: center; 
+    display: block;
+}
+/* End of classes
+
+***
+***
+***
+
+ID definitions */
+#toast {
+    position: absolute;
+    left: 50%;
+    width: 240px;
+    margin-left: -120px;
+    height: 170px;
+    top: 50%;
+    margin-top: -60px;
+    z-index: 99;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: red;
+    opacity: 0.8;
+}
+/* End of ID */

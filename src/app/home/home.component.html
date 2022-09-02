@@ -1,0 +1,47 @@
+<!-- Main container of the component -->
+<div class="myContainer container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Home</h2>
+        </div>
+    </div>
+    <hr>
+    <div id="homePhoto" class="container-fluid w-50 h-auto mx-auto">
+        <i class="fa fa-user-circle" title="Profile photo"></i>
+    </div>
+    <hr style="opacity:0.2;">
+    <!-- Profile info -->
+    <div id="info" class="container-fluid w-40 h-auto mx-auto">
+        <div class="row container-fluid mr-auto h-auto w-auto mx-auto" style="text-align: left;">
+            <small style="font-size: 12px;opacity:0.5;">Le tue informazioni personali</small>
+        </div>
+        <div class="row container-fluid mr-auto p-auto">
+            <div class="col-md-6">Firstname:</div>
+            <div class="col-md-6"><strong>{{ user?.firstname }}</strong></div>
+        </div>
+        <div class="row container-fluid mr-auto">
+            <div class="col-md-6">Lastname:</div>
+            <div class="col-md-6"><strong>{{ user?.lastname }}</strong></div>
+        </div>
+        <div class="row container-fluid mr-auto">
+            <div class="col-md-6">Username:</div>
+            <div class="col-md-6"><strong>{{ user?.username }}</strong></div>
+        </div>
+        <div class="row container-fluid mr-auto">
+            <div class="col-md-6">Password:</div>
+            <div class="col-md-6" style="padding:0px;">
+                <strong>
+                    <a style="color:#007bff;" (click)="showPassword=!showPassword">{{ (showPassword)?'Nascondi':'Mostra' }}</a> |
+                    {{ (showPassword)?user.password:'****' }}
+                </strong>
+            </div>
+        </div>
+        <div class="row container-fluid mr-auto">
+            <div class="col-md-6">Invia mail:</div>
+            <div class="col-md-6"><strong><a href="mailto:user.email">Click here...</a></strong></div>
+        </div>
+    </div>
+    <!---->
+    <hr>
+</div>
+<!---->

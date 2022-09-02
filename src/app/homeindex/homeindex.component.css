@@ -1,0 +1,99 @@
+/* Tag definitions */
+header{
+    width: 100%;
+}
+
+nav {
+    height: auto;
+}
+
+nav a.active button{
+    color: skyblue;
+    background-color: black;
+    border-radius: 25px;
+    border: 1px solid gainsboro;
+}
+
+a {
+    text-align: right;
+    text-decoration: none;
+    color: white;
+}
+
+hr{
+    border-top: 1px solid gainsboro;
+    opacity: 0.7;
+    width: 70%;
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-size: 16px;
+    color: white;
+    margin: 0px 20px;
+}
+/* End of tags 
+
+***
+***
+***
+
+Class definitions */
+.accountButton{
+    background-color: black;
+    text-align: center;
+    border: 1px solid transparent;
+    opacity: 0.8;
+    border-radius: 25px;
+}
+
+.accountButton:hover {
+    opacity: 1;
+}
+
+.window {
+    width: 100px;
+    color: white;
+    opacity: 0.9;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: black;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.window:hover {
+    opacity: 1;
+}
+
+.window>a:hover, .window>button:hover {
+    color: skyblue;
+}
+/* End of classes 
+
+***
+***
+***
+
+ID definitions */
+#topTitle  {
+    border-bottom: 1px solid gainsboro;
+}
+
+#breadCrumbs {
+    font-style: italic;
+    opacity: 0.7;
+    font-size: 18px;
+    color: #333;
+    padding-left: 5px;
+    border-left: 3px solid blue;
+    margin-left: 10px;
+}
+
+#updateUser {
+    display:block;
+    text-align:center;
+}
+/* End of ID */

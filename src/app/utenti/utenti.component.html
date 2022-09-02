@@ -1,0 +1,46 @@
+<!-- Toast -->
+<ngb-toast id="toast" aria-labelledby="viewport" header="Conferma eliminazione" *ngIf="confirmElim" (hide)="confirmElim=false;" [autohide]="false">
+    <div class="toast-body">
+        <strong>Vuoi davvero eliminare l'utente?</strong>
+        <br>
+        <span class="toastButtons">
+            <button (click)="deleteUser(userToEliminate);">Elimina</button>
+            <button (click)="confirmElim=false;">Annulla</button>
+        </span>
+    </div>
+</ngb-toast>
+<!---->
+
+<!-- Main container of the component -->
+<div class="myContainer container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Utenti</h2>
+        </div>
+    </div>
+    <!-- Table of users -->
+    <table class="table table-borderless container-fluid w-80 mx-auto">
+        <thead>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>E-mail</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Elimina</th>
+        </thead>
+        <tbody>
+            <!-- Array -> Rows -->
+            <tr *ngFor="let utente of utenti">
+                <td>{{ utente.firstname }}</td>
+                <td>{{ utente.lastname }}</td>
+                <td>{{ utente.email }}</td>
+                <td>{{ utente.username }}</td>
+                <td>{{ utente.password }}</td>
+                <td title="Elimina utente"><i class="fas fa-trash-alt" (click)="confirmElimination(utente);"></i></td>
+            </tr>
+            <!---->
+        </tbody>
+    </table>
+    <!---->
+</div>
+<!---->

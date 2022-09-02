@@ -1,0 +1,67 @@
+<!-- Toast -->
+<ngb-toast id="toast" aria-labelledby="viewport" header="Conferma eliminazione" *ngIf="confirmElim"
+    (hide)="confirmElim=false;" [autohide]="false">
+    <strong>Vuoi davvero eliminare il prodotto?</strong>
+    <br>
+    <span style="text-align: center; display: block;">
+        <button (click)="deleteProduct();">Ok</button>
+        <button (click)="confirmElim=false;" class="del-button">Annulla</button>
+    </span>
+</ngb-toast>
+<!---->
+
+<!-- Main container of the component -->
+<div class="myContainer">
+    <!-- Top area -->
+    <div class="row">
+        <div class="col-md-6" style="text-align:left;">
+            <a routerLink="/app-index/catalogo"><button class="h-auto"><i class="fas fa-arrow-left"></i> &nbsp;
+                    Indietro</button></a>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            <h2>{{ (edit)?'Dettagli prodotto':'Nuovo prodotto' }}</h2>
+        </div>
+    </div>
+    <!---->
+    <!-- Form of the product -->
+    <form #f="ngForm" novalidate [formGroup]="prodotto" (submit)="addProduct();" class="w-50 p-10 mx-auto">
+        <div class="form-group">
+            <label for="nome">Nome: </label>
+            <input class="form-control" type="text" id="nome" [formControl]="prodotto.get('nome')"
+                placeholder="Nome prodotto..." maxlength="20" autocomplete="off" [disabled]="edit" required>
+            <small class="whiteSmall" *ngIf="edit">Non puoi modificare il nome del prodotto.</small>
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" [formControl]="prodotto.get('descrizione')"
+                placeholder="Descrizione prodotto..." maxlength="60" autocomplete="off" required></textarea>
+            <small class="whiteSmall">(Max 50 caratteri)</small>
+        </div>
+        <div class="form-group">
+            <label for="prezzo">Prezzo:</label>
+            <input class="form-control" (input)="priceControl();" [formControl]="prodotto.get('prezzo')" type="text"
+                id="prezzo" placeholder="Prezzo..." maxlength="10" autocomplete="off" required>
+                <!-- Price error message-->
+            <small class="errorSmall" *ngIf="price">Prezzo non valido</small>
+            <hr>
+            <small class="whiteSmall">
+                {{ (edit)?'Inserire nuove informazioni relative al prodotto.':'Inserire informazioni del nuovo prodotto da inserire.' }}
+            </small>
+        </div>
+        <!-- Bottom area -->
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="btn h-auto"
+                    [disabled]="f.invalid || price">{{ (edit)? 'Aggiorna prodotto':'Aggiungi prodotto' }}</button>
+                <button type="button" class="btn del-button" *ngIf="edit" (click)="confirmElim=true;">Elimina</button>
+            </div>
+        </div>
+        <!---->
+    </form>
+    <!---->
+    <hr>
+
+</div>
+<!---->

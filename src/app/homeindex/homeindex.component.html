@@ -1,0 +1,41 @@
+<!-- Div to update the breadcrumbs -->
+<div (mouseover)="updateBreadcrumbs();">
+    <!-- Top header menu -->
+    <div id="navHeader" class="container-fluid w-100 h-auto mx-auto">
+        <header id="topTitle" class="container-fluid h-auto">
+            <h3>Accounts Management System</h3>
+        </header>
+        <!-- Navigation menu with buttons -->
+        <nav class="navbar" (click)="updateBreadcrumbs();">
+            <a routerLink='home' routerLinkActive="active"><button>Home</button></a>
+            <a routerLink='utenti' routerLinkActive="active"><button>Utenti</button></a>
+            <a routerLink='catalogo' routerLinkActive="active"><button>Catalogo</button></a>
+            <!-- Dropdown menu button -->
+            <button ngbDropdown class="dropdown accountButton" *ngIf="user.username">
+                <a ngbDropdownToggle title="Area personale">Ciao {{ user?.firstname }}</a>
+                <div class="window container-fluid mr-auto dropdown-menu" ngbDropdownMenu>
+                    <a title="Personalizza profilo" id="updateUser" routerLink="update"><i class="fas fa-edit"></i> &nbsp; Profilo</a>
+                    <button title="Esci" (click)="logout();"><i class="fas fa-door-open"></i> &nbsp; Logout</button>
+                </div>
+            </button>
+            <!---->
+        </nav>
+        <!---->
+    </div>
+    <!---->
+
+    <br>
+
+    <!-- Breadcrumbs -->
+    <div id="breadCrumbs">
+        {{ breadCrumbs }}
+    </div>
+    <!---->
+
+    <!--- Router-outlet to the selected route component -->
+    <router-outlet></router-outlet>
+    <!---->
+
+</div>
+<!---->
+

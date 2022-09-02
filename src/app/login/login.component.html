@@ -1,0 +1,32 @@
+<!-- Main container of the component -->
+<div class="myContainer container-fluid w-50 p-15 mx-auto">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Login</h2>
+        </div>
+    </div>
+    <!-- Login form -->
+    <form [formGroup]="utente" novalidate #f="ngForm" class="w-100 p-3 mx-auto" (submit)="login(f)">
+        <hr>
+        <div class="form-group">
+            <small class="loginSmall">Inserisci le tue credenzali per accedere.</small><br>
+            <label for="username">Username: </label>
+            <input class="form-control" id="username" type="text" [formControl]="utente.get('username')" placeholder="Inserisci username..." autocomplete="off" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input class="form-control" id="password" type="password" [formControl]="utente.get('password')" placeholder="Inserisci password..." autocomplete="off" required>
+        </div>
+        <hr>
+        <!-- Buttons row -->
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" [disabled]="f.invalid"  title="Accedi">Login</button>
+                <a routerLink="../app-register"><button title="Nuovo profilo">Register</button></a>
+            </div>
+        </div>
+        <!-- -->
+    </form> 
+    <!---->
+</div>
+<!---->

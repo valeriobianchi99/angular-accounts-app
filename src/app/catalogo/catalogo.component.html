@@ -1,0 +1,45 @@
+<!-- Main container of the component -->
+<div class="myContainer container-fluid">
+    <div class="row container-fluid mr-auto">
+        <!-- Filter products -->
+        <div class="col-md-6 container-fluid w-auto h-auto mr-auto" style="text-align: left; cursor: pointer;" title="Cerca nei prodotti">
+            Filtra per : <input type="text" [(ngModel)]="filtro" (input)="filterBy();" placeholder="Cerca">
+            <small id="searchSmall">Applica un filtro ai prodotti visualizzati.</small>
+        </div>
+        <!---->
+        <!-- Add new product -->
+        <div class="col-md-6 container-fluid w-auto h-auto mr-auto" style="text-align:right;">
+            <a routerLink="../newproduct"><button id="newButton" title="Nuovo prodotto" ><i class="fas fa-plus"></i> &nbsp; <strong>Nuovo</strong></button></a>
+        </div>
+        <!---->
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Catalogo prodotti</h2>
+        </div>
+    </div>
+    <!-- Table of products -->
+    <table class="table table-borderless container-fluid w-80 mx-auto">
+        <thead>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Descrizione</th>
+            <th>Prezzo</th>
+            <th>Dettagli</th>
+        </thead>
+        <tbody>
+            <!-- Array -> Rows -->
+            <tr *ngFor="let prodotto of prodotti">
+                <td>{{ prodotto.id }}</td>
+                <td>{{ prodotto.nome }}</td>
+                <td>{{ prodotto.descrizione }}</td>
+                <td>{{ prodotto.prezzo | currency: 'EUR' }}</td>
+                <td title="Vedi dettagli"><a [routerLink]="['../articolo/',prodotto.id]"><i class="fas fa-file-alt"></i></a></td>
+            </tr>
+            <!---->
+        </tbody>
+    </table>
+    <!---->
+</div>
+<!---->

@@ -1,0 +1,40 @@
+/* Tag definitions */
+ngb-toast {
+    border: 1px solid black;
+    box-shadow: 1px 1px 15px black;
+    z-index: 99;
+    position: absolute;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px;
+    height: auto;
+    top: 10%;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+}
+/* End of tags 
+
+***
+***
+***
+
+Class definitions */
+.toast.show{
+    opacity: 0.8;
+}
+
+.toast-body{
+    height: 130px;
+    line-height: 25px;
+    font-size: 18px;
+}
+
+.success {
+    background-color: green;
+}
+
+.error {
+    background-color: red;
+}
+/* End of classes */

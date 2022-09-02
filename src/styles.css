@@ -1,0 +1,107 @@
+/* Tag definitions */
+header {
+    height: 80px;
+    width: 100%;
+    text-align: center;
+    padding: 25px 0px;
+}
+
+body {
+    background-color: gainsboro;
+}
+
+label {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    position: relative;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 0px;
+    font-size: 14px;
+    opacity: 0.5;
+}
+
+input:hover, input:focus, textarea:hover, textarea:focus {
+    opacity: 1;
+    cursor: pointer;
+}
+
+nav {
+    height: 60px;
+    width: 100%;
+}
+/* End of tags 
+
+***
+***
+***
+
+/* Class definitions */
+.myContainer {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: auto;
+    padding: 40px;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    background-image: linear-gradient(black, #333);
+    box-shadow: 2px 2px 10px black;
+    overflow-x: auto;
+} 
+
+.form-group{
+    text-align: left;
+}
+/* End of classes
+
+***
+***
+***
+
+ID definitions */
+#wrapper {
+    height: auto;
+    position: relative;
+}
+
+#navHeader {
+    position: relative;
+    background-color: #333;
+    color: white;
+    height: 140px;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 2px 2px 10px black;
+    margin-top: 20px;
+}
+/* End of ID 
+
+***
+***
+***
+
+Scrollbar */
+::-webkit-scrollbar {
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+   
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+/* End of scrollbar */

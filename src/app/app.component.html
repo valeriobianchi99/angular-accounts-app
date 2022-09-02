@@ -1,0 +1,15 @@
+<!-- Toast for success/error message -->
+<ngb-toast id="toast" [class]="toast.type" aria-labelledby="viewport" [header]="toast.type" *ngIf="alert" (hide)="alert=false;" [autohide]="false">
+    <strong>{{ toast.message }}</strong>
+</ngb-toast>
+<!---->
+
+<!-- Wrapper of all the app -->
+<div id="wrapper" class="container-fluid w-75 p-3 mx-auto"> 
+    <!-- Router-outlet for the selected route component -->
+    <router-outlet></router-outlet>
+    <footer>
+        Copyright &copy; 2019
+    </footer>
+</div>
+<!---->
